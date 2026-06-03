@@ -5,37 +5,26 @@ Delivery performance analysis exploring late deliveries, shipping efficiency, an
 
 This project is part of the Google Data Analytics Capstone and focuses on analyzing key delivery-related metrics using a real world supply chain dataset.
 
-The objective is to examine patterns of late deliveries, identify the worst-performing regions, shipping modes, and product categories, and explore the relationship between delivery reliability and profitability.
-
-The analysis highlights the top 5 worst-performing segments to support targeted insights and decision-making.
+The objective is to examine patterns of late deliveries, identify the worst-performing by shipping modes and explore the relationship between delivery reliability and profitability.
 
 It covers three years (2015–2017) and includes an interactive dashboard with a year filter for time based trend analysis.
 Data from 2018 was excluded as it only contains one month of records.
 
 ## Ask Phase
 
-### Business Problem
-
-The company is experiencing a high rate of late deliveries, affecting delivery reliability across regions, shipping modes, and product categories.
-
-Despite this, profitability shows a slight increase, raising concerns about the alignment between operational performance and business outcomes.
-
-
 ### Business Objective
 
 The objective of this analysis is to:
 
 - Identify patterns of late deliveries  
-- Detect the worst-performing regions, shipping modes, and product categories  
+- Detect the worst-performing by shipping modes   
 - Compare planned vs actual delivery performance  
 - Evaluate the relationship between delivery reliability and profitability  
 
 
 ### Key Questions
-
-- Which regions have the highest late delivery rates?  
+ 
 - Which shipping modes are most associated with delays?  
-- Which product categories show the highest delivery risk relative to order volume?  
 - How has late delivery performance evolved over time (2015–2017)?  
 - What is the gap between scheduled and actual shipping duration?  
 - How does profitability relate to delivery risk across categories?  
@@ -141,22 +130,7 @@ Data cleaning and transformation were performed using SQL (BigQuery) to prepare 
 **Note:** SQL queries used for data cleaning and analysis are available in the `/sql` folder.
 ## Analyze Phase
 
-The analysis focuses on key delivery-related metrics to identify patterns of late deliveries and evaluate performance across regions, shipping modes, and product categories over the period 2015–2017.
-
-### Key Insights
-
-- Out of approximately 178K orders, 54.81% are delivered late, while only 17.84% are delivered on time and 23.05% arrive early (advanced).  
-- The cancellation rate remains very low, indicating strong customer retention despite service delays.  
-
-**Insight:** This highlights a significant imbalance in delivery performance, where late deliveries dominate the system.
-
-
-- Late delivery rates remain relatively stable across 2015–2017, showing no significant improvement over time.  
-
-- Central Africa records one of the highest delay rates (~57.96%), consistently across the three-year period, highlighting persistent regional inefficiencies.  
-
-- First Class shipping shows the highest exposure to delays across all three years, indicating underperformance of premium shipping services.  
-
+The analysis focuses on key delivery-related metrics to identify patterns of late deliveries and evaluate performance over the period 2015–2017.
 
 ### Shipping Performance Gap
 
@@ -168,17 +142,6 @@ Significant gaps exist between scheduled and actual delivery times across shippi
 
 **Insight:** This indicates inefficiencies in delivery planning and execution.  
 **Insight:** The logistics system is optimized for high-volume, low-speed delivery, while faster shipping options are not reliably supported.
-
-
-### Category-Level Insights
-
-- Golf Bags & Carts (68.85% late, low volume) suggest issues related to bulky or non-standard items  
-- High-volume categories such as Cameras (58% late) indicate internal processing limitations  
-
-- Categories with higher average benefit per order tend to fall within the high-profit / high-risk zone  
-
-**Insight:** This creates a risk to both customer satisfaction and long-term business performance.  
-
 
 ### System-Wide Observation
 
@@ -196,9 +159,7 @@ Significant gaps exist between scheduled and actual delivery times across shippi
 
 ### Overall Conclusion
 
-The consistently high delay rates across regions, shipping modes, and product categories indicate that the issue is systemic rather than localized.
-
-
+The consistently high delay rates across shipping modes indicate that the issue is systemic rather than localized.
 
 ## Share Phase
 
@@ -215,22 +176,13 @@ The dashboard is structured to guide decision-makers from high-level KPIs to det
 At the top level, key performance indicators provide a quick summary of overall performance:
 
 - Total Orders: 178K  
-- Average Benefit per Order: 22.05  
-- Average Actual Shipping Time: 3.50 days  
+- Average Benefit per Order: 22.05   
 - Overall Late Delivery Rate: 54.81%  
 
-**Insight:** These KPIs reveal a high delay rate despite stable profitability, while the average actual shipping time (3.5 days) does not meet expected delivery timelines.
+**Insight:** These KPIs reveal a high delay rate despite stable profitability.
 
   
 ## Dashboard Insights
-
-### Overall Delivery Status
-- The Overall Delivery Status chart shows that late deliveries represent the largest share, exceeding both on-time and early deliveries, while cancellations remain minimal.
-
-### Regional Performance
-- The Late Delivery Rate by Region visualization highlights the top 5 worst-performing regions, with Central Africa (57.96%) as the most critical.
-
-**Insight:** This enables quick identification of geographically concentrated inefficiencies.
 
 
 ### Shipping Mode Analysis
@@ -272,25 +224,8 @@ At the top level, key performance indicators provide a quick summary of overall 
 
 **Insight:** High profitability is associated with higher delivery risk.
 
-
-### Design & Interaction Choices
-- A Top 5 filtering approach was applied to focus on critical issues  
-- Interactive filters were integrated into:
-  - Late delivery rate by region  
-  - Late delivery rate by category vs order volume  
-
-- Additional design elements:
-  - Red → Critical delay levels  
-  - Orange → Warning levels  
-  - Bubble size → Average benefit per order  
-  - Year filter → Enables analysis across 2015–2017  
-
 **Insight:** These design choices enhance usability and support dynamic exploration.
-
-### Key Takeaway
-
-The dashboard highlights that delays are consistently high across regions, shipping modes, and categories, while profitability remains stable. 
-
+ 
 ## Act Phase
 
 Based on the analysis, several recommendations can be made to improve delivery performance and reduce operational risk.
@@ -324,14 +259,12 @@ Based on the analysis, several recommendations can be made to improve delivery p
 - Track key KPIs:
   - Late delivery rate  
   - Shipping duration gap  
-  - Performance by region and category  
 - Use dashboards to monitor performance continuously and support decision-making  
 
 **Result:** This enables proactive management of delivery performance
 
 ##  Conclusion
 
-This analysis revealed that delivery delays are widespread across all area of the business.
 Despite stable profitability, delivery performance remains poor, with more than half of orders delivered late and no significant improvement over time.
 The findings highlight a clear misalignment between operational efficiency and business performance, emphasizing the need for improvements in planning, execution, and service reliability and addressing these issues is essential to enhance customer satisfaction and ensure sustainable business growth.
 
