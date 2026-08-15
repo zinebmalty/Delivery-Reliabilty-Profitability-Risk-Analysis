@@ -62,27 +62,18 @@ FROM
 
 
 -- 4. Check for duplicate records
--- Duplicates are defined by order_id, category_name, and order_region
 
-SELECT t.*
-FROM `supply-chain-analysis-capstone.supply_chain_data.cleaned_logistics_data` AS t
-INNER JOIN (
-    SELECT 
-        Order_id,
-        Category_name,
-        Order_region,
-        COUNT(*) AS duplicate_count
-    FROM 
-        `supply-chain-analysis-capstone.supply_chain_data.cleaned_logistics_data`
-    GROUP BY 
-        Order_id, Category_name, Order_region
-    HAVING 
-        COUNT(*) > 1
-) AS duplicates
-ON t.Order_id = duplicates.order_id 
-AND t.Category_name = duplicates.category_name
-AND t.Order_region = duplicates.order_region;
-
+SELECT
+    Order_id,
+    Category_name,
+    Order_region,
+    COUNT(*) AS duplicate_count
+FROM `supply-chain-analysis-capstone.supply_chain_data.cleaned_logistics_data`
+GROUP BY
+    Order_id,
+    Category_name,
+    Order_region
+HAVING COUNT(*) > 1;
 
 
 -- 5. Check distribution of shipping duration (Outlier detection)
