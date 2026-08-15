@@ -2,61 +2,7 @@
 -- Description: Key metrics for delivery reliabilty 
 -- All analysis is limited to 2015–2017 (2018 excluded due to incomplete data)
 
-
--- 1. Overall Delivery Status Distribution
--- Show proportion of late, on-time, early, and canceled orders
-
-SELECT 
-    Delivery_status,
-
-    COUNT(*) AS total_orders,
-
-    ROUND(
-        COUNT(*) * 100.0 / SUM(COUNT(*)) OVER(),
-        2
-    ) AS percentage
-
-FROM 
-    `supply-chain-analysis-capstone.supply_chain_data.cleaned_logistics_data`
-
-WHERE EXTRACT(YEAR FROM Order_date_DateOrders) BETWEEN 2015 AND 2017
-
-GROUP BY 
-    Delivery_status
-
-ORDER BY 
-    total_orders DESC;
-
-
-
--- 2. Late Delivery Rate by Region
--- Identify regions with the highest delay rates
-
-SELECT 
-    Order_region,
-    COUNT(Order_id) AS total_orders,
-
-    COUNTIF(Delivery_status = 'LATE DELIVERY' THEN 1 ELSE 0 END) AS late_orders,
-
-    ROUND(
-        COUNTIF(delivery_status = 'LATE DELIVERY') * 100.0 / COUNT(*),
-        2
-    ) AS late_delivery_rate
-
-FROM 
-    `supply-chain-analysis-capstone.supply_chain_data.cleaned_logistics_data`
-
-WHERE EXTRACT(YEAR FROM Order_date_DateOrders) BETWEEN 2015 AND 2017
-
-GROUP BY 
-    order_region
-
-ORDER BY 
-    late_delivery_rate DESC;
-
-
-
--- 3.Analyze delivery performance and profitability by product category
+-- 1.Analyze delivery performance and profitability by product category
 
 SELECT 
     Category_name,
@@ -86,7 +32,7 @@ ORDER BY
 
 
 
--- 4. Late Delivery Rate by Month (Trend Analysis)
+-- 2. Late Delivery Rate by Month (Trend Analysis)
 -- Analyze monthly delivery performance over time
 
 SELECT 
@@ -117,7 +63,7 @@ ORDER BY
 
 
 
--- 5. Shipping Mode Performance Analysis
+-- 3. Shipping Mode Performance Analysis
 -- Compare actual vs scheduled delivery time and delay rate by shipping mode
 
 SELECT 
