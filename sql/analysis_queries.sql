@@ -2,23 +2,6 @@
 -- Description: Key metrics for delivery reliabilty 
 -- All analysis is limited to 2015–2017 (2018 excluded due to incomplete data)
 
-
--- Overall delivery status 
-SELECT 
-    Delivery_Status,
-    COUNT(*) AS total_orders,
-    ROUND(COUNT(*) * 100 / SUM(COUNT(*)) OVER(), 2) AS percentage
-FROM 
-    `supply-chain-analysis-capstone.supply_chain_data.cleaned_logistics_data`
-      
-WHERE EXTRACT(YEAR FROM Order_date_DateOrders) BETWEEN 2015 AND 2017
-    
-GROUP BY 
-Delivery_Status
-ORDER BY 
-    total_orders DESC;
-
-
 -- Analyze delivery performance and profitability by product category
 
 SELECT 
