@@ -169,8 +169,7 @@ The dashboard is structured to guide decision-makers from high-level KPIs to det
 
 ### Dashboard Overview 
 
-<img width="1200" height="800" alt="Dashboard 11 (2)" src="https://github.com/user-attachments/assets/9859fde1-ca8a-4521-af6b-2aa8889f5639" />
-
+<img width="1200" height="800" alt="Dashboard 11 (2)" src="https://github.com/user-attachments/assets/07d6b9ea-5d03-4ed8-a335-f9d183553910" />
 
 ### Key Performance Indicators (KPIs)
 
@@ -273,7 +272,7 @@ The findings highlight a clear misalignment between operational efficiency and b
 ## 🔗 Project Resources
 
 - 📊 Interactive Dashboard:  
-  [View on Tableau Public](https://public.tableau.com/views/DeliveryReliabilityProfitRiskAnalysis20152017/Dashboard8)
+  [View on Tableau Public]([https://public.tableau.com/views/DeliveryReliabilityProfitRiskAnalysis20152017/Dashboard8](https://public.tableau.com/app/profile/zineb.malty/viz/DeliveryReliabilityProfitRiskAnalysis2015-2017/Dashboard112?publish=yes))
 
 - 📁 Dataset:  
   [View Dataset on Kaggle](https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis/data)
