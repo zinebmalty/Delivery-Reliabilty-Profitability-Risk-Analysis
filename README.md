@@ -169,7 +169,7 @@ The dashboard is structured to guide decision-makers from high-level KPIs to det
 
 ### Dashboard Overview 
 
-<img width="1200" height="800" alt="Dashboard 11" src="https://github.com/user-attachments/assets/94fbc423-d236-4d08-9ede-94617f9c8239" />
+<img width="650" height="550" alt="Dashboard 11 (2)" src="https://github.com/user-attachments/assets/9859fde1-ca8a-4521-af6b-2aa8889f5639" />
 
 
 ### Key Performance Indicators (KPIs)
