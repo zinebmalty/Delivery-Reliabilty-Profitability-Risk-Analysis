@@ -230,29 +230,19 @@ At the top level, key performance indicators provide a quick summary of overall 
 
 Based on the analysis, several recommendations can be made to improve delivery performance and reduce operational risk.
 
-### Optimize Handling of High-Risk Categories
+### Late Delivery Trend by Year
 
-- Implement specialized handling processes for bulky or non-standard items (eg Golf Bags & Carts)
-- Improve internal processing for high-volume categories (eg Cameras)
+- Investigate the root causes of recurring delays, including transportation capacity, processing times, and shipping modes, and establish targeted initiatives to reduce the late delivery rate.
 	
-**Result:** This reduces delays caused by packaging and capacity limitations
-
 ### Improve Planning and Scheduling Accuracy
 
 - Review the execution of First Class, Second Class, and Same Day shipping  
 - Align promised delivery times with actual operational capacity  
-- Improve demand forecasting and resource allocation  
-
-**Result:** This enhances delivery time accuracy and operational efficiency  
-
 
 ### Balance Profitability and Delivery Risk
 
 - Monitor high profit categories that also show high delivery risk  
 - Ensure that revenue growth is not achieved at the expense of service reliability  
-
-**Result:** This protects long-term customer satisfaction and business sustainability  
-
 
 ### Implement Performance Monitoring
 
